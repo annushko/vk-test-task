@@ -1,0 +1,23 @@
+plugins {
+    id "java-library"
+}
+
+group "com.example"
+version "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: "org.testng", name: "testng", version: "7.6.1"
+    implementation group: "com.codeborne", name: "selenide", version: "6.8.1"
+    implementation group: "io.qameta.allure", name: "allure-testng", version: "2.19.0"
+    implementation group: "io.qameta.allure", name: "allure-selenide", version: "2.19.0"
+}
+
+test {
+    useTestNG {
+        preserveOrder true
+    }
+}
